@@ -401,7 +401,7 @@ export class FarkleComponent implements OnInit {
       console.log('The computer selected: ' + compPlayer.playerSel);
     }
     function buttonReset(){
-      $('button').prop('disabled', true);
+      $('.container button').prop('disabled', true);
       $('#formBut').prop('disabled', false);
     }
     //globals
@@ -523,7 +523,7 @@ export class FarkleComponent implements OnInit {
           var winningStr = 'Congrats! You won in ' + playerOne.turnNum + ' turn(s)!';
           $('#youWin').show();
           $('#youWin').find('h1').text(winningStr);
-          $('button').prop('disabled', true);
+          $('.container button').prop('disabled', true);
           return;
         }
         computerInit();
