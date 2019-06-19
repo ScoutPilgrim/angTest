@@ -309,7 +309,7 @@ export class FarkleComponent implements OnInit {
       $('#whichTurn').text(myStr);
       $('#myTurn').text(turnStr);
       $('#formBut').prop('disabled', false);
-      $('button').removeClass('btn-success');
+      $('.container button').removeClass('btn-success');
       $('#submitVal').addClass('btn-warning');
       $('#endTurn').addClass('btn-danger');
     }
@@ -318,8 +318,8 @@ export class FarkleComponent implements OnInit {
       computerPlayer.playerEndTurn();
       var myStr = "Opponent's Turn!";
       $('#whichTurn').text(myStr);
-      $('button').prop('disabled', true);
-      $('button').addClass('btn-success').removeClass('btn-danger').removeClass('btn-warning');
+      $('.container button').prop('disabled', true);
+      $('.container button').addClass('btn-success').removeClass('btn-danger').removeClass('btn-warning');
       selectedDice.resetRollNum();
       myRollClass.resetRollNum();
       initDice(computerPlayer.playerDice);
@@ -366,7 +366,7 @@ export class FarkleComponent implements OnInit {
       }
       myRoll(computerPlayer.playerDice, computerPlayer.playerRoll);
       populateButtons(computerPlayer.playerRoll);
-      $('button').prop('disabled', true);
+      $('.container button').prop('disabled', true);
     }
     function computerDecision(compPlayer){
       computerPlayer.playerSel = [];
