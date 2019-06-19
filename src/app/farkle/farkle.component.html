@@ -1,0 +1,53 @@
+<div class="container">
+      <div class="centerWrap">
+        <h1 id='whichTurn'>Your Turn!</h1>
+      </div>
+      <form id="butForm">
+        <div class="form-group">
+          <button type="submit" id='formBut'class="btn btn-primary form-control">Roll the dice!</button>
+        </div>
+      </form>
+      <div class="row">
+        <div class="col">
+          <button type="button" id="diceBut1" class="btn btn-primary clickable">0</button>
+        </div>
+        <div class="col">
+          <button type="button" id="diceBut2" class="btn btn-primary clickable">0</button>
+        </div>
+        <div class="col">
+          <button type="button" id="diceBut3" class="btn btn-primary clickable">0</button>
+        </div>
+        <div class="col">
+          <button type="button" id="diceBut4" class="btn btn-primary clickable">0</button>
+        </div>
+        <div class="col">
+          <button type="button" id="diceBut5" class="btn btn-primary clickable">0</button>
+        </div>
+        <div class="col">
+          <button type="button" id="diceBut6" class="btn btn-primary clickable">0</button>
+        </div>
+      </div>
+      <div class="row pad">
+        <div class="col">
+          <button type="button" id="resetSel" class="btn btn-primary">Deselect Dice</button>
+        </div>
+        <div class="col">
+          <button disabled type="button" id="submitVal" class="btn btn-warning">Submit Dice</button>
+        </div>
+        <div class="col">
+          <button type="button" id="endTurn" class="btn btn-danger">End Turn</button>
+        </div>
+      </div>
+      <div id='divScore'>
+        <h3 id='roundScore'>Round Score: 0</h3>
+        <h3 id='playerScore'>Player Score: 0</h3>
+        <h3 id='compScore'>Computer Score: 0</h3>
+        <h3 id='myTurn'>Turn: 1</h3>
+      </div>
+      <div id='youWin'>
+        <h1></h1>
+      </div>
+      <div class="busted centerWrap">
+        <h2>Bust!</h2>
+      </div>
+    </div>
