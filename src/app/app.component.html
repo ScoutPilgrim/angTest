@@ -2,9 +2,9 @@
       <div class="centerWrap">
         <h1 id='whichTurn'>Your Turn!</h1>
       </div>
-      <form [id]="butForm">
+      <form id="butForm">
         <div class="form-group">
-          <button type="submit" id='formBut'class="btn btn-primary form-control" ng-click="rollInput($event)">Roll the dice!</button>
+          <button type="submit" id='formBut'class="btn btn-primary form-control">Roll the dice!</button>
         </div>
       </form>
       <div class="row">
@@ -35,7 +35,7 @@
           <button disabled type="button" id="submitVal" class="btn btn-warning">Submit Dice</button>
         </div>
         <div class="col">
-          <button type="button" id="endTurn" class="btn btn-danger" (click)="clickTest()">End Turn</button>
+          <button type="button" id="endTurn" class="btn btn-danger">End Turn</button>
         </div>
       </div>
       <div id='divScore'>
