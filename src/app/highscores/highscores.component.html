@@ -1,3 +1,7 @@
-<p>
-  highscores works!
-</p>
+<h2>High Scores</h2>
+
+<div *ngFor="let score of scores | async" class="panel panel-default">
+  <div class="panel-body">
+    <h3><em>{{score.val}}</em></h3>
+  </div>
+</div>

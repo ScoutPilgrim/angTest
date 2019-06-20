@@ -524,7 +524,7 @@ export class FarkleComponent implements OnInit {
         if(playerOne.score >= playerOne.winningScore){
           console.log('Winner')
           var winningStr = 'Congrats! You won in ' + playerOne.turnNum + ' turn(s)!';
-          var turnWin = playerOne.turnNum;
+          var turnWin = {"val": playerOne.turnNum};
           temp.highscoreService.pushHighScore(turnWin);
           $('#youWin').show();
           $('#youWin').find('h1').text(winningStr);

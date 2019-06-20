@@ -11,4 +11,7 @@ export class HighscoreService {
   pushHighScore(int){
     this.highscores.push(int);
   }
+  getHighScores(){
+    return this.highscores;
+  }
 }
