@@ -1,16 +1,19 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireModule } from 'angularfire2';
+import {AngularFireDatabase, AngularFireDatabaseModule, FirebaseListObservable} from 'angularfire2/database';
+import { HighscoreService } from '../highscore.service';
 declare var $: any;
 
 @Component({
   selector: 'app-farkle',
   templateUrl: './farkle.component.html',
-  styleUrls: ['./farkle.component.css']
+  styleUrls: ['./farkle.component.css'],
+  providers: [HighscoreService]
 })
 export class FarkleComponent implements OnInit {
-
-  constructor() { }
-
+  constructor(public highscoreService: HighscoreService) {}
   ngOnInit() {
+    var temp = this;
     class SixDice {
       sideOne = 1;
       sideTwo = 2;
@@ -54,7 +57,7 @@ export class FarkleComponent implements OnInit {
       score = 0;
       rollScore = 0;
       turnNum = 1;
-      winningScore = 5000; //Should be 5000 for non testing
+      winningScore = 1000; //Should be 5000 for non testing
       playerDice = [];
       playerRoll = [];
       playerSel = [];
@@ -521,6 +524,8 @@ export class FarkleComponent implements OnInit {
         if(playerOne.score >= playerOne.winningScore){
           console.log('Winner')
           var winningStr = 'Congrats! You won in ' + playerOne.turnNum + ' turn(s)!';
+          var turnWin = playerOne.turnNum;
+          temp.highscoreService.pushHighScore(turnWin);
           $('#youWin').show();
           $('#youWin').find('h1').text(winningStr);
           $('.container button').prop('disabled', true);
